@@ -9,7 +9,7 @@ class HandyApiResponse
     /**
      * @var bool
      */
-    protected $success = false;
+    protected $success = true;
 
     /**
      * @var array
@@ -30,6 +30,35 @@ class HandyApiResponse
     {
         $this->data = $data;
         return $this;
+    }
+
+    public function setSuccess($bool){
+        $this->success = $bool;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isSuccess()
+    {
+        return $this->success;
+    }
+
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @return array
+     */
+    public function getErrors()
+    {
+        return $this->errors;
     }
 
     /**
