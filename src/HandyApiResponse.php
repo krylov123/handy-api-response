@@ -49,7 +49,11 @@ class HandyApiResponse
      */
     public function toArray()
     {
-        return (array)$this;
+        return [
+            "success" => $this->success,
+            "errors" => $this->errors,
+            "data" => $this->data
+        ];
     }
 
 }
